@@ -1,0 +1,337 @@
+import java.io.*;
+import java.util.*;
+abstract class Animal 
+{
+	protected String locomotion;
+	protected boolean herbivores;
+	protected boolean canFly;
+	public abstract void movement();
+	public abstract void setLocomotion(String locomotion);
+	public abstract void setHerbivores(boolean herbivores);
+	public abstract void setCanFly(boolean canFly);
+	public abstract String getLocomotion();
+	public abstract boolean getHerbivores();
+	public abstract boolean getCanFly();
+}
+class Mammal extends Animal
+{
+	public void setLocomotion(String locomotion)
+	{
+		this.locomotion=locomotion;
+	}
+	public void setHerbivores(boolean herbivores)
+	{
+		this.herbivores=herbivores;
+	}
+	public void setCanFly(boolean canFly)
+	{
+		this.canFly=canFly;
+	}
+	public String getLocomotion()
+	{
+		return this.locomotion;
+	}
+	public boolean getHerbivores()
+	{
+		return this.herbivores;
+	}	
+	public boolean getCanFly()
+	{
+		return this.canFly;
+	}
+	public void movement()
+	{
+		System.out.println("locomotion="+locomotion);
+	}
+}
+class Bird extends Animal
+{
+	public void setLocomotion(String locomotion)
+	{
+		this.locomotion=locomotion;
+	}
+	public void setHerbivores(boolean herbivores)
+	{
+		this.herbivores=herbivores;
+	}
+	public void setCanFly(boolean canFly)
+	{
+		this.canFly=canFly;
+	}
+	public String getLocomotion()
+	{
+		return this.locomotion;
+	}
+	public boolean getHerbivores()
+	{
+		return this.herbivores;
+	}	
+	public boolean getCanFly()
+	{
+		return this.canFly;
+	}
+	public void movement()
+	{
+		System.out.println("locomotion="+locomotion);
+	}
+
+}
+class Bat extends Mammal
+{
+	public void setLocomotion(String locomotion)
+	{
+		this.locomotion=locomotion;
+	}
+	public void setHerbivores(boolean herbivores)
+	{
+		this.herbivores=herbivores;
+	}
+	public void setCanFly(boolean canFly)
+	{
+		this.canFly=canFly;
+	}
+	public String getLocomotion()
+	{
+		return this.locomotion;
+	}
+	public boolean getHerbivores()
+	{
+		return this.herbivores;
+	}	
+	public boolean getCanFly()
+	{
+		return this.canFly;
+	}
+	public void movement()
+	{
+		System.out.println("locomotion="+locomotion);
+	}
+
+}
+class Dog extends Mammal
+{
+	public void setLocomotion(String locomotion)
+	{
+		this.locomotion=locomotion;
+	}
+	public void setHerbivores(boolean herbivores)
+	{
+		this.herbivores=herbivores;
+	}
+	public void setCanFly(boolean canFly)
+	{
+		this.canFly=canFly;
+	}
+	public String getLocomotion()
+	{
+		return this.locomotion;
+	}
+	public boolean getHerbivores()
+	{
+		return this.herbivores;
+	}	
+	public boolean getCanFly()
+	{
+		return this.canFly;
+	}
+	public void movement()
+	{
+		System.out.println("locomotion="+locomotion);
+	}
+
+}
+class Cow extends Mammal
+{
+	public void setLocomotion(String locomotion)
+	{
+		this.locomotion=locomotion;
+	}
+	public void setHerbivores(boolean herbivores)
+	{
+		this.herbivores=herbivores;
+	}
+	public void setCanFly(boolean canFly)
+	{
+		this.canFly=canFly;
+	}
+	public String getLocomotion()
+	{
+		return this.locomotion;
+	}
+	public boolean getHerbivores()
+	{
+		return this.herbivores;
+	}	
+	public boolean getCanFly()
+	{
+		return this.canFly;
+	}
+	public void movement()
+	{
+		System.out.println("locomotion="+locomotion);
+	}
+
+}
+class Ostrich extends Bird
+{
+	public void setLocomotion(String locomotion)
+	{
+		this.locomotion=locomotion;
+	}
+	public void setHerbivores(boolean herbivores)
+	{
+		this.herbivores=herbivores;
+	}
+	public void setCanFly(boolean canFly)
+	{
+		this.canFly=canFly;
+	}
+	public String getLocomotion()
+	{
+		return this.locomotion;
+	}
+	public boolean getHerbivores()
+	{
+		return this.herbivores;
+	}	
+	public boolean getCanFly()
+	{
+		return this.canFly;
+	}
+	public void movement()
+	{
+		System.out.println("locomotion="+locomotion);
+	}
+
+}
+class Parrot extends Bird
+{
+	public void setLocomotion(String locomotion)
+	{
+		this.locomotion=locomotion;
+	}
+	public void setHerbivores(boolean herbivores)
+	{
+		this.herbivores=herbivores;
+	}
+	public void setCanFly(boolean canFly)
+	{
+		this.canFly=canFly;
+	}
+	public String getLocomotion()
+	{
+		return this.locomotion;
+	}
+	public boolean getHerbivores()
+	{
+		return this.herbivores;
+	}	
+	public boolean getCanFly()
+	{
+		return this.canFly;
+	}
+	public void movement()
+	{
+		System.out.println("locomotion="+locomotion);
+	}
+
+}
+class MammalDemo
+{
+	public Animal input(Animal obj)throws IOException
+	{
+			
+		Scanner input=new Scanner(System.in);
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+			
+		System.out.print("Enetr locomotion=");
+		String locomotion=input.nextLine();
+		System.out.print("Herbivores(1/0)=");
+		int h=Integer.parseInt(br.readLine());
+		System.out.print("CanFly(1/0)=");
+		int f=Integer.parseInt(br.readLine());
+		obj.setLocomotion(locomotion);
+		if(h==0)
+		obj.setHerbivores(false);
+		else 
+		obj.setHerbivores(true);
+		if(f==0)
+		obj.setCanFly(false);
+		else
+		obj.setCanFly(true);
+		return obj;
+	}
+	public void display(Animal obj)
+	{
+		obj.movement();
+		System.out.println("Herbivores="+obj.getHerbivores());
+		System.out.println("CanFly="+obj.getCanFly());
+	}
+			
+	public static void main(String arsg[])throws IOException
+	{
+		Program1 obj=new Program1();
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		ArrayList<Animal> animals=new ArrayList<Animal>(); 
+		int choice;
+		Iterator it=null;
+		do
+		{
+			System.out.println("1 for create object of bat.");
+			System.out.println("2 for create object of dog.");
+			System.out.println("3 for create object of cow.");
+			System.out.println("4 for create object of ostrich.");
+			System.out.println("5 for create object of parrot.");
+			System.out.println("6 for display all Instances.");
+			System.out.println("7 for display that can fly.");
+			System.out.println("8 for display those are herbivores.");
+			System.out.println("0 for Exit.");
+			System.out.println("\nEnter your Choice=");
+			choice=Integer.parseInt(br.readLine());
+			switch(choice)
+			{
+				case 1:Bat bat=new Bat();
+					animals.add(obj.input(bat));
+					break;
+				case 2:Dog dog=new Dog();
+					animals.add(obj.input(dog));
+					break;
+				case 3:Cow cow=new Cow();
+					animals.add(obj.input(cow));
+					break;
+				case 4:Ostrich ostrich=new Ostrich();
+					animals.add(obj.input(ostrich));
+					break;
+				case 5:Parrot parrot=new Parrot();
+					animals.add(obj.input(parrot));
+					break;
+				case 6:it=animals.iterator();
+					while(it.hasNext())
+					{
+						Animal animal=(Animal)it.next();
+						obj.display(animal);
+					}
+					break;
+				case 7:
+					it=animals.iterator();
+					while(it.hasNext())
+					{
+						Animal animal=(Animal)it.next();
+						if(animal.getCanFly())
+						obj.display(animal);
+					}
+					break;
+				case 8:
+					it=animals.iterator();
+					while(it.hasNext())
+					{
+						Animal animal=(Animal)it.next();
+						if(animal.getHerbivores())
+						obj.display(animal);
+					}
+					break;
+	
+			}
+		}while(choice!=0);				
+	}
+}
